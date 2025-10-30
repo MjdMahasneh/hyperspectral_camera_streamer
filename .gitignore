@@ -1,0 +1,47 @@
+# =============================
+# Python build and cache files
+# =============================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+*.npy
+*.npz
+
+# =============================
+# Environment and virtualenv
+# =============================
+.env
+.venv
+env/
+venv/
+*.egg-info/
+pip-wheel-metadata/
+build/
+dist/
+
+# =============================
+# IDE / Editor
+# =============================
+.idea/
+.vscode/
+*.iml
+
+# =============================
+# Output / Generated Data
+# =============================
+output/
+*.png
+*.jpg
+
+# =============================
+# System / OS
+# =============================
+.DS_Store
+Thumbs.db
+
+# =============================
+# Git metadata (safety)
+# =============================
+.git/

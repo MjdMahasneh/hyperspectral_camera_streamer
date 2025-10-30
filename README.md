@@ -4,7 +4,7 @@ A high-speed, low-latency **hyperspectral line-scanner streamer** implemented in
 
 ---
 
-## 🚀 Features
+## Features
 
 - **Threaded acquisition and visualization** — continuous camera streaming and live display.
 - **Zero-copy shared memory** — capture and visualization threads share the same 3D NumPy cube (no serialization overhead).
@@ -14,7 +14,7 @@ A high-speed, low-latency **hyperspectral line-scanner streamer** implemented in
 
 ---
 
-## 🧠 Architecture Overview
+## Architecture Overview
 
 ```
 [ Capture Thread ]                  [ Main Thread ]
@@ -28,7 +28,7 @@ The camera capture never stops while the main thread visualizes the latest data 
 
 ---
 
-## 🧩 Key Concepts
+## Key Concepts
 
 | Concept | Description |
 |----------|-------------|
@@ -40,25 +40,18 @@ The camera capture never stops while the main thread visualizes the latest data 
 
 ---
 
-## 🛠️ Installation
+## Installation
 
 Clone the repository or install directly from GitHub:
 
 ```bash
-git clone https://github.com/<your-username>/hyperspectral-streamer.git
-cd hyperspectral-streamer
-pip install -r requirements.txt
-```
-
-Or install as a package:
-
-```bash
-pip install git+https://github.com/<your-username>/hyperspectral-streamer.git
+git clone https://github.com/MjdMahasneh/hyperspectral_camera_streamer.git
+cd hyperspectral_camera_streamer
 ```
 
 ---
 
-## ⚙️ Requirements
+## Requirements
 
 ```bash
 pip install numpy opencv-python
@@ -75,7 +68,7 @@ Place the provided `HAIP_BlackIndustry.py` file (or your own camera API wrapper)
 
 ---
 
-## ▶️ Usage
+## Usage
 
 1. Connect your hyperspectral camera (e.g., HAIP) via GigE or USB.
 2. Adjust parameters in the configuration section:
@@ -101,7 +94,7 @@ Controls:
 
 ---
 
-## 📊 Output Structure
+## Output Structure
 
 ```
 output/
@@ -111,7 +104,7 @@ output/
 
 ---
 
-## 🧰 Example Integration (HAIP Camera)
+## Example Integration (HAIP Camera)
 
 HAIP pushbroom sensors stream ~450 FPS spectral lines via GigE.  
 Example minimal integration:
@@ -124,6 +117,10 @@ frame = cam.getImage()  # returns a (640, 213) spectral line
 ```
 
 The streamer wraps this logic in a multi-threaded shared-memory pipeline, enabling near-zero latency visualization.
+
+
+
+
 
 
 
